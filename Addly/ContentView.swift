@@ -13,7 +13,7 @@ struct ContentView: View {
     var result: String {
         get {
             guard let o1 = Int(operand1.value), let o2 = Int(operand2.value) else {
-                return "Error"
+                return "0"
             }
             let sum = o1 + o2
             let asStr = String(sum)
@@ -28,7 +28,7 @@ struct ContentView: View {
                     .font(Font.custom("Menlo-Bold", size: 32))
                 Spacer()
                 TextField("Operand 1", text: $operand1.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18))
-                Text("➕")
+                Text("➕").font(Font.custom("Menlo-Bold", size: 23)).padding()
                 TextField("Operand 2", text: $operand2.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18))
                 
                 Text("=").font(Font.custom("Menlo-Bold", size: 23)).padding()
