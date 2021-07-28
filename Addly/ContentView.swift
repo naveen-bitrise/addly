@@ -27,12 +27,12 @@ struct ContentView: View {
                 Text("☞ add.ly")
                     .font(Font.custom("Menlo-Bold", size: 32))
                 Spacer()
-                TextField("Operand 1", text: $operand1.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18))
+                TextField("Operand 1", text: $operand1.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18)).accessibility(identifier: "operand1")
                 Text("➕").font(Font.custom("Menlo-Bold", size: 23)).padding()
-                TextField("Operand 2", text: $operand2.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18))
+                TextField("Operand 2", text: $operand2.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18)).accessibility(identifier: "operand2")
                 
                 Text("=").font(Font.custom("Menlo-Bold", size: 23)).padding()
-                Text(result).font(Font.custom("Menlo-Bold", size: 23))
+                Text(result).font(Font.custom("Menlo-Bold", size: 23)).accessibility(identifier: "result")
             }
         )
     }
