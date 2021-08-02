@@ -22,4 +22,15 @@ class AddlyUITests: XCTestCase {
         operand2.typeText("22")
         XCTAssertEqual("33", result.label)
     }
+    
+    func testAddingOneOperand() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        let operand1 = app.textFields["operand1"]
+        let result = app.staticTexts["result"]
+        operand1.tap()
+        operand1.typeText("11")
+        XCTAssertEqual("0", result.label)
+    }
 }
