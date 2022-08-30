@@ -15,12 +15,11 @@ struct ContentView: View {
             guard let o1 = Int(operand1.value), let o2 = Int(operand2.value) else {
                 return "0"
             }
-            let sum = o1 + o2
+            let sum = operand1Value + operand2Value
             let asStr = String(sum)
             return asStr
-        }
     }
-    
+
     var body: some View {
         Color.init(red: (249/256), green: (242/256), blue: (214/256)).ignoresSafeArea().overlay(
             VStack {
@@ -30,7 +29,6 @@ struct ContentView: View {
                 TextField("Operand 1", text: $operand1.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18)).accessibility(identifier: "operand1")
                 Text("➕").font(Font.custom("Menlo-Bold", size: 23)).padding()
                 TextField("Operand 2", text: $operand2.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18)).accessibility(identifier: "operand2")
-                
                 Text("=").font(Font.custom("Menlo-Bold", size: 23)).padding()
                 Text(result).font(Font.custom("Menlo-Bold", size: 23)).accessibility(identifier: "result")
             }
