@@ -11,9 +11,9 @@
 		AF40A0A826AF4495001FF0AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0A726AF4495001FF0AE /* ContentView.swift */; };
 		AF40A0AA26AF4497001FF0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF40A0A926AF4497001FF0AE /* Assets.xcassets */; };
 		AF40A0AD26AF4497001FF0AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF40A0AC26AF4497001FF0AE /* Preview Assets.xcassets */; };
-		AF40A0B826AF4497001FF0AE /* AddlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0B726AF4497001FF0AE /* AddlyTests.swift */; };
 		AF40A0C326AF4497001FF0AE /* AddlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0C226AF4497001FF0AE /* AddlyUITests.swift */; };
 		AF40A0D126AF4EBC001FF0AE /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0D026AF4EBC001FF0AE /* NumbersOnly.swift */; };
+		AF40A0D326B0CAF9001FF0AE /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0D226B0CAF9001FF0AE /* ContentViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +41,12 @@
 		AF40A0AC26AF4497001FF0AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF40A0AE26AF4497001FF0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF40A0B326AF4497001FF0AE /* AddlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF40A0B726AF4497001FF0AE /* AddlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddlyTests.swift; sourceTree = "<group>"; };
 		AF40A0B926AF4497001FF0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF40A0BE26AF4497001FF0AE /* AddlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF40A0C226AF4497001FF0AE /* AddlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddlyUITests.swift; sourceTree = "<group>"; };
 		AF40A0C426AF4497001FF0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF40A0D026AF4EBC001FF0AE /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
+		AF40A0D226B0CAF9001FF0AE /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 		AF40A0B626AF4497001FF0AE /* AddlyTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF40A0B726AF4497001FF0AE /* AddlyTests.swift */,
 				AF40A0B926AF4497001FF0AE /* Info.plist */,
+				AF40A0D226B0CAF9001FF0AE /* ContentViewTests.swift */,
 			);
 			path = AddlyTests;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF40A0B826AF4497001FF0AE /* AddlyTests.swift in Sources */,
+				AF40A0D326B0CAF9001FF0AE /* ContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
