@@ -15,9 +15,10 @@ struct ContentView: View {
             guard let o1 = Int(operand1.value), let o2 = Int(operand2.value) else {
                 return "0"
             }
-            let sum = operand1Value + operand2Value
+            let sum = o1 + o2
             let asStr = String(sum)
             return asStr
+        }
     }
 
     var body: some View {
