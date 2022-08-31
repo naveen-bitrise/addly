@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,13 @@
 		AF40A0AD26AF4497001FF0AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF40A0AC26AF4497001FF0AE /* Preview Assets.xcassets */; };
 		AF40A0C326AF4497001FF0AE /* AddlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0C226AF4497001FF0AE /* AddlyUITests.swift */; };
 		AF40A0D126AF4EBC001FF0AE /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0D026AF4EBC001FF0AE /* NumbersOnly.swift */; };
-		AF40A0D326B0CAF9001FF0AE /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0D226B0CAF9001FF0AE /* ContentViewTests.swift */; };
+		AF825C5228BEB52E005F0578 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AF825C5128BEB52E005F0578 /* Lottie */; };
+		AF825C5428BEE50C005F0578 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5328BEE50C005F0578 /* LottieView.swift */; };
+		AF825C5A28BEEB3A005F0578 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = AF825C5828BEE976005F0578 /* loading.json */; };
+		AF825C5C28BEEDBF005F0578 /* Adder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5B28BEEDBF005F0578 /* Adder.swift */; };
+		AF825C6028BFB50A005F0578 /* IntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */; };
+		AF825C6228BFB5EA005F0578 /* AdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6128BFB5EA005F0578 /* AdderTests.swift */; };
+		AF825C6428BFB65F005F0578 /* ZeroIntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +52,12 @@
 		AF40A0C226AF4497001FF0AE /* AddlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddlyUITests.swift; sourceTree = "<group>"; };
 		AF40A0C426AF4497001FF0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF40A0D026AF4EBC001FF0AE /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
-		AF40A0D226B0CAF9001FF0AE /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
+		AF825C5328BEE50C005F0578 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		AF825C5828BEE976005F0578 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = loading.json; path = Addly/animations/loading.json; sourceTree = SOURCE_ROOT; };
+		AF825C5B28BEEDBF005F0578 /* Adder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adder.swift; sourceTree = "<group>"; };
+		AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalMaker.swift; sourceTree = "<group>"; };
+		AF825C6128BFB5EA005F0578 /* AdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderTests.swift; sourceTree = "<group>"; };
+		AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroIntervalMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF825C5228BEB52E005F0578 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +112,13 @@
 				AF40A0A526AF4495001FF0AE /* AddlyApp.swift */,
 				AF40A0A726AF4495001FF0AE /* ContentView.swift */,
 				AF40A0A926AF4497001FF0AE /* Assets.xcassets */,
+				AF825C5728BEE96E005F0578 /* animations */,
 				AF40A0AE26AF4497001FF0AE /* Info.plist */,
 				AF40A0AB26AF4497001FF0AE /* Preview Content */,
 				AF40A0D026AF4EBC001FF0AE /* NumbersOnly.swift */,
+				AF825C5328BEE50C005F0578 /* LottieView.swift */,
+				AF825C5B28BEEDBF005F0578 /* Adder.swift */,
+				AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */,
 			);
 			path = Addly;
 			sourceTree = "<group>";
@@ -119,7 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				AF40A0B926AF4497001FF0AE /* Info.plist */,
-				AF40A0D226B0CAF9001FF0AE /* ContentViewTests.swift */,
+				AF825C6128BFB5EA005F0578 /* AdderTests.swift */,
+				AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */,
 			);
 			path = AddlyTests;
 			sourceTree = "<group>";
@@ -131,6 +148,14 @@
 				AF40A0C426AF4497001FF0AE /* Info.plist */,
 			);
 			path = AddlyUITests;
+			sourceTree = "<group>";
+		};
+		AF825C5728BEE96E005F0578 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				AF825C5828BEE976005F0578 /* loading.json */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +174,9 @@
 			dependencies = (
 			);
 			name = Addly;
+			packageProductDependencies = (
+				AF825C5128BEB52E005F0578 /* Lottie */,
+			);
 			productName = Addly;
 			productReference = AF40A0A226AF4495001FF0AE /* Addly.app */;
 			productType = "com.apple.product-type.application";
@@ -203,6 +231,7 @@
 					};
 					AF40A0B226AF4497001FF0AE = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = AF40A0A126AF4495001FF0AE;
 					};
 					AF40A0BD26AF4497001FF0AE = {
@@ -220,6 +249,9 @@
 				Base,
 			);
 			mainGroup = AF40A09926AF4495001FF0AE;
+			packageReferences = (
+				AF825C5028BEB52E005F0578 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = AF40A0A326AF4495001FF0AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF825C5A28BEEB3A005F0578 /* loading.json in Resources */,
 				AF40A0AD26AF4497001FF0AE /* Preview Assets.xcassets in Resources */,
 				AF40A0AA26AF4497001FF0AE /* Assets.xcassets in Resources */,
 			);
@@ -264,7 +297,10 @@
 			files = (
 				AF40A0A826AF4495001FF0AE /* ContentView.swift in Sources */,
 				AF40A0D126AF4EBC001FF0AE /* NumbersOnly.swift in Sources */,
+				AF825C5C28BEEDBF005F0578 /* Adder.swift in Sources */,
 				AF40A0A626AF4495001FF0AE /* AddlyApp.swift in Sources */,
+				AF825C5428BEE50C005F0578 /* LottieView.swift in Sources */,
+				AF825C6028BFB50A005F0578 /* IntervalMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF40A0D326B0CAF9001FF0AE /* ContentViewTests.swift in Sources */,
+				AF825C6228BFB5EA005F0578 /* AdderTests.swift in Sources */,
+				AF825C6428BFB65F005F0578 /* ZeroIntervalMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +502,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B443VGB84;
 				INFOPLIST_FILE = AddlyTests/Info.plist;
@@ -476,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitrise.AddlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Addly.app/Addly";
@@ -487,6 +526,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8B443VGB84;
 				INFOPLIST_FILE = AddlyTests/Info.plist;
@@ -584,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF825C5028BEB52E005F0578 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF825C5128BEB52E005F0578 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF825C5028BEB52E005F0578 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF40A09A26AF4495001FF0AE /* Project object */;
 }

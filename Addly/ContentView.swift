@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    let adder: Adder
     @ObservedObject var operand1 = NumbersOnly()
     @ObservedObject var operand2 = NumbersOnly()
+    @State var status = AddingStatus.nothingToAdd
+    
     var result: String {
         get {
-            guard let o1 = Int(operand1.value), let o2 = Int(operand2.value) else {
+            switch status {
+            case .nothingToAdd:
                 return "0"
+            case .adding:
+                return ""
+            case .added(let newVal):
+                return newVal
+            case .error:
+                return "error"
             }
-            let sum = o1 + o2
-            let asStr = String(sum)
-            return asStr
         }
     }
 
@@ -27,11 +34,48 @@ struct ContentView: View {
                 Text("☞ add.ly")
                     .font(Font.custom("Menlo-Bold", size: 32))
                 Spacer()
-                TextField("Operand 1", text: $operand1.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18)).accessibility(identifier: "operand1")
-                Text("➕").font(Font.custom("Menlo-Bold", size: 23)).padding()
-                TextField("Operand 2", text: $operand2.value).keyboardType(.decimalPad).font(Font.custom("Menlo", size: 18)).accessibility(identifier: "operand2")
-                Text("=").font(Font.custom("Menlo-Bold", size: 23)).padding()
+                if (self.status == .adding) {
+                    LottieView()
+                }
+                TextField("Operand 1", text: $operand1.value.onChange(operandChanged))
+                    .keyboardType(.decimalPad)
+                    .font(Font.custom("Menlo", size: 18))
+                    .accessibility(identifier: "operand1")
+                Text("➕")
+                    .font(Font.custom("Menlo-Bold", size: 23))
+                    .padding()
+                TextField("Operand 2", text: $operand2.value.onChange(operandChanged))
+                    .keyboardType(.decimalPad)
+                    .font(Font.custom("Menlo", size: 18))
+                    .accessibility(identifier: "operand2")
+                Text("=")
+                    .font(Font.custom("Menlo-Bold", size: 23))
+                    .padding()
                 Text(result).font(Font.custom("Menlo-Bold", size: 23)).accessibility(identifier: "result")
+            }
+
+        )
+    }
+    
+    func operandChanged(to value: String) {
+        if (self.status == .adding) {
+            self.status = .nothingToAdd
+        }
+        self.status = .adding
+        adder.add(operand1: operand1, operand2: operand2) { newStatus in
+            self.status = newStatus
+        }
+    }
+}
+
+extension Binding {
+    func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
+        Binding(
+            get: {
+                self.wrappedValue },
+            set: { newValue in
+                self.wrappedValue = newValue
+                handler(newValue)
             }
         )
     }
@@ -39,6 +83,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(adder: Adder(intervalMaker: RandomIntervalMaker()))
     }
 }
