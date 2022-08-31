@@ -12,21 +12,20 @@ struct ContentView: View {
     @ObservedObject var operand1 = NumbersOnly()
     @ObservedObject var operand2 = NumbersOnly()
     @State var status = AddingStatus.nothingToAdd
-    
+
     var result: String {
-        get {
-            switch status {
-            case .nothingToAdd:
-                return "0"
-            case .adding:
-                return ""
-            case .added(let newVal):
-                return newVal
-            case .error:
-                return "error"
-            }
+        switch status {
+        case .nothingToAdd:
+            return "0"
+        case .adding:
+            return ""
+        case .added(let newVal):
+            return newVal
+        case .error:
+            return "error"
         }
     }
+}
 
     var body: some View {
         Color.init(red: (249/256), green: (242/256), blue: (214/256)).ignoresSafeArea().overlay(
@@ -34,7 +33,7 @@ struct ContentView: View {
                 Text("☞ add.ly")
                     .font(Font.custom("Menlo-Bold", size: 32))
                 Spacer()
-                if (self.status == .adding) {
+                if self.status == .adding {
                     LottieView()
                 }
                 TextField("Operand 1", text: $operand1.value.onChange(operandChanged))
@@ -53,12 +52,11 @@ struct ContentView: View {
                     .padding()
                 Text(result).font(Font.custom("Menlo-Bold", size: 23)).accessibility(identifier: "result")
             }
-
         )
     }
-    
+
     func operandChanged(to value: String) {
-        if (self.status == .adding) {
+        if self.status == .adding {
             self.status = .nothingToAdd
         }
         self.status = .adding
