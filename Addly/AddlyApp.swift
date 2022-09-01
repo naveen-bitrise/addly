@@ -11,7 +11,7 @@ import SwiftUI
 struct AddlyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(adder: Adder(intervalMaker: RandomIntervalMaker()))
         }
     }
 }
