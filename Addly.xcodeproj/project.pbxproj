@@ -20,6 +20,7 @@
 		AF825C6028BFB50A005F0578 /* IntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */; };
 		AF825C6228BFB5EA005F0578 /* AdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6128BFB5EA005F0578 /* AdderTests.swift */; };
 		AF825C6428BFB65F005F0578 /* ZeroIntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */; };
+		AF8ECC27295CCFD200E6E9E1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8ECC26295CCFD200E6E9E1 /* Media.xcassets */; };
 		AF92EC832952737300E47CFA /* AddlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0A526AF4495001FF0AE /* AddlyApp.swift */; };
 		AF92EC842952737700E47CFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0A726AF4495001FF0AE /* ContentView.swift */; };
 		AF92EC852952737A00E47CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF40A0A926AF4497001FF0AE /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroIntervalMaker.swift; sourceTree = "<group>"; };
 		AF825C6528C15FE2005F0578 /* UnitTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = UnitTest.xctestplan; path = Addly.xcodeproj/UnitTest.xctestplan; sourceTree = "<group>"; };
 		AF825C6628C16026005F0578 /* UITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITest.xctestplan; sourceTree = "<group>"; };
+		AF8ECC26295CCFD200E6E9E1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AF92EC752952735900E47CFA /* aedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 		AF40A09926AF4495001FF0AE = {
 			isa = PBXGroup;
 			children = (
+				AF8ECC26295CCFD200E6E9E1 /* Media.xcassets */,
 				AF825C6628C16026005F0578 /* UITest.xctestplan */,
 				AF825C6528C15FE2005F0578 /* UnitTest.xctestplan */,
 				AF40A0A426AF4495001FF0AE /* Addly */,
@@ -350,6 +353,7 @@
 			files = (
 				AF92EC862952738500E47CFA /* loading.json in Resources */,
 				AF92EC872952739E00E47CFA /* Preview Assets.xcassets in Resources */,
+				AF8ECC27295CCFD200E6E9E1 /* Media.xcassets in Resources */,
 				AF92EC852952737A00E47CFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,6 +679,8 @@
 				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Addly;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -707,6 +713,8 @@
 				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Addly;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
