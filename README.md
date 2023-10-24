@@ -1,1 +1,1 @@
-This is some readme text
+A simple demo app for use on Bitrise

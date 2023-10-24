@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "60F3C413-A07A-495D-A430-75DB86AA77E3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Addly.xcodeproj",
+        "identifier" : "AF40A0BD26AF4497001FF0AE",
+        "name" : "AddlyUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
