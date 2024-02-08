@@ -11,7 +11,7 @@ import XCTest
 
 class FailingAdderTests: XCTestCase {
 
-    func testAdder_happyPath() {
+    func testAdder_badMath() {
         let expectation = XCTestExpectation(description: "Add asynchronously")
         let adder = Adder(intervalMaker: ZeroIntervalMaker())
         let operandNum1 = NumbersOnly()
