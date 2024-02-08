@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		AF825C6028BFB50A005F0578 /* IntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */; };
 		AF825C6228BFB5EA005F0578 /* AdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6128BFB5EA005F0578 /* AdderTests.swift */; };
 		AF825C6428BFB65F005F0578 /* ZeroIntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */; };
+		AFEDB5DA2B7589F800E8521F /* FailingAdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEDB5D92B7589F800E8521F /* FailingAdderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +59,10 @@
 		AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalMaker.swift; sourceTree = "<group>"; };
 		AF825C6128BFB5EA005F0578 /* AdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderTests.swift; sourceTree = "<group>"; };
 		AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroIntervalMaker.swift; sourceTree = "<group>"; };
+		AFEDB5D92B7589F800E8521F /* FailingAdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingAdderTests.swift; sourceTree = "<group>"; };
 		AFFB30D02AE802D700893EDC /* UITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITest.xctestplan; sourceTree = "<group>"; };
 		AFFB30D12AE82A5D00893EDC /* UnitTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTest.xctestplan; sourceTree = "<group>"; };
-		AFFB30D22AE82AC200893EDC /* UnitUnit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitUnit.xctestplan; sourceTree = "<group>"; };
+		AFFB30D22AE82AC200893EDC /* FailingUnit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FailingUnit.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 		AF40A09926AF4495001FF0AE = {
 			isa = PBXGroup;
 			children = (
-				AFFB30D22AE82AC200893EDC /* UnitUnit.xctestplan */,
+				AFFB30D22AE82AC200893EDC /* FailingUnit.xctestplan */,
 				AFFB30D02AE802D700893EDC /* UITest.xctestplan */,
 				AFFB30D12AE82A5D00893EDC /* UnitTest.xctestplan */,
 				AF40A0A426AF4495001FF0AE /* Addly */,
@@ -143,6 +145,7 @@
 				AF40A0B926AF4497001FF0AE /* Info.plist */,
 				AF825C6128BFB5EA005F0578 /* AdderTests.swift */,
 				AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */,
+				AFEDB5D92B7589F800E8521F /* FailingAdderTests.swift */,
 			);
 			path = AddlyTests;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEDB5DA2B7589F800E8521F /* FailingAdderTests.swift in Sources */,
 				AF825C6228BFB5EA005F0578 /* AdderTests.swift in Sources */,
 				AF825C6428BFB65F005F0578 /* ZeroIntervalMaker.swift in Sources */,
 			);

@@ -35,6 +35,9 @@
          <TestPlanReference
             reference = "container:UnitTest.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:FailingUnit.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
