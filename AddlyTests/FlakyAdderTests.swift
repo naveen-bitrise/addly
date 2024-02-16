@@ -18,15 +18,15 @@ final class FlakyAdderTests: XCTestCase {
     func testRand101Under2() {
         generateAndCheckRandomNumber(fromOneTo: 101)
     }
-  
+
     func testRand102Under2() {
         generateAndCheckRandomNumber(fromOneTo: 102)
     }
-  
+
     func testRand103Under2() {
         generateAndCheckRandomNumber(fromOneTo: 103)
     }
-  
+
     func testRand104Under2() {
         generateAndCheckRandomNumber(fromOneTo: 104)
     }
