@@ -62,7 +62,6 @@
 		AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroIntervalMaker.swift; sourceTree = "<group>"; };
 		AF9826172B802135008A6B81 /* FlakyTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FlakyTest.xctestplan; sourceTree = "<group>"; };
 		AF9826182B802156008A6B81 /* FlakyAdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlakyAdderTests.swift; sourceTree = "<group>"; };
-		AF98261A2B8022FC008A6B81 /* bla.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bla.sh; sourceTree = "<group>"; };
 		AFEDB5D92B7589F800E8521F /* FailingAdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingAdderTests.swift; sourceTree = "<group>"; };
 		AFFB30D02AE802D700893EDC /* UITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITest.xctestplan; sourceTree = "<group>"; };
 		AFFB30D12AE82A5D00893EDC /* UnitTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTest.xctestplan; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 		AF40A09926AF4495001FF0AE = {
 			isa = PBXGroup;
 			children = (
-				AF98261A2B8022FC008A6B81 /* bla.sh */,
 				AF9826172B802135008A6B81 /* FlakyTest.xctestplan */,
 				AFFB30D22AE82AC200893EDC /* FailingUnit.xctestplan */,
 				AFFB30D02AE802D700893EDC /* UITest.xctestplan */,
