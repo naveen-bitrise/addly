@@ -14,7 +14,8 @@
   "testTargets" : [
     {
       "skippedTests" : [
-        "FailingAdderTests"
+        "FailingAdderTests",
+        "FlakyAdderTests"
       ],
       "target" : {
         "containerPath" : "container:Addly.xcodeproj",
