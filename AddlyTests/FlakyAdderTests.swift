@@ -7,7 +7,32 @@
 
 import XCTest
 
+// swiftlint:disable type_body_length
 final class FlakyAdderTests: XCTestCase {
+
+    func testRand100Under2() {
+        generateAndCheckRandomNumber(fromOneTo: 100)
+    }
+   
+    func testRand101Under2() {
+        generateAndCheckRandomNumber(fromOneTo: 101)
+    }
+   
+    func testRand102Under2() {
+        generateAndCheckRandomNumber(fromOneTo: 102)
+    }
+   
+    func testRand103Under2() {
+        generateAndCheckRandomNumber(fromOneTo: 103)
+    }
+   
+    func testRand104Under2() {
+        generateAndCheckRandomNumber(fromOneTo: 104)
+    }
+
+    func testRand105Under2() {
+        generateAndCheckRandomNumber(fromOneTo: 105)
+    }
 
     func testRand106Under2() {
         generateAndCheckRandomNumber(fromOneTo: 106)
