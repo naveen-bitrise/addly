@@ -8,6 +8,7 @@
 import XCTest
 
 // swiftlint:disable type_body_length
+// swiftlint:disable file_length
 final class FlakyAdderTests: XCTestCase {
 
     func testRand100Under2() {
@@ -419,3 +420,4 @@ final class FlakyAdderTests: XCTestCase {
         XCTAssert(randomNumber > 5, "Random number \(randomNumber) is not above 5")
     }
 }
+// swiftlint:enable type_body_length
