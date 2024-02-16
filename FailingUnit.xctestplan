@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "8AEF72EC-0B28-4F8C-9324-C630DBC1FD3D",
+      "id" : "A64F872A-FAD9-4A88-B737-905204B2E9D9",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,13 +9,13 @@
     }
   ],
   "defaultOptions" : {
+    "testRepetitionMode" : "fixedIterations",
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
-      "skippedTests" : [
-        "FailingAdderTests",
-        "FlakyAdderTests"
+      "selectedTests" : [
+        "FailingAdderTests\/testAdder_badMath()"
       ],
       "target" : {
         "containerPath" : "container:Addly.xcodeproj",
