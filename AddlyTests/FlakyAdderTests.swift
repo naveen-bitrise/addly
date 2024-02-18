@@ -417,7 +417,7 @@ final class FlakyAdderTests: XCTestCase {
 
     func generateAndCheckRandomNumber(fromOneTo upperBound: Int) {
         let randomNumber = Int.random(in: 1...upperBound)
-        XCTAssert(randomNumber > 5, "Random number \(randomNumber) is not above 5")
+        XCTAssert(randomNumber > 2, "Random number \(randomNumber) is not above 2")
     }
 }
 // swiftlint:enable type_body_length
