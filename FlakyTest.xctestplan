@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "60F3C413-A07A-495D-A430-75DB86AA77E3",
+      "id" : "FDE4F352-8F86-4BDA-B3F7-453CBDF090D0",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,14 +9,20 @@
     }
   ],
   "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testRepetitionMode" : "retryOnFailure",
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
+      "skippedTests" : [
+        "AdderTests",
+        "FailingAdderTests"
+      ],
       "target" : {
         "containerPath" : "container:Addly.xcodeproj",
-        "identifier" : "AF40A0BD26AF4497001FF0AE",
-        "name" : "AddlyUITests"
+        "identifier" : "AF40A0B226AF4497001FF0AE",
+        "name" : "AddlyTests"
       }
     }
   ],

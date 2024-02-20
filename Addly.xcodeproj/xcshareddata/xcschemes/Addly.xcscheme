@@ -29,11 +29,17 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Addly.xcodeproj/UnitTest.xctestplan"
+            reference = "container:UITest.xctestplan"
             default = "YES">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:UITest.xctestplan">
+            reference = "container:UnitTest.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:FailingUnit.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:FlakyTest.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>
