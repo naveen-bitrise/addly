@@ -22,6 +22,16 @@
         "identifier" : "AF40A0B226AF4497001FF0AE",
         "name" : "AddlyTests"
       }
+    },
+    {
+      "skippedTests" : [
+        "AddlyUITests"
+      ],
+      "target" : {
+        "containerPath" : "container:Addly.xcodeproj",
+        "identifier" : "AF40A0BD26AF4497001FF0AE",
+        "name" : "AddlyUITests"
+      }
     }
   ],
   "version" : 1
