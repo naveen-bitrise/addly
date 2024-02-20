@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF92EC742952735900E47CFA"
-               BuildableName = "aedemo"
+               BuildableName = "aedemo.app"
                BlueprintName = "aedemo"
                ReferencedContainer = "container:Addly.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF92EC742952735900E47CFA"
-            BuildableName = "aedemo"
+            BuildableName = "aedemo.app"
             BlueprintName = "aedemo"
             ReferencedContainer = "container:Addly.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF92EC742952735900E47CFA"
-            BuildableName = "aedemo"
+            BuildableName = "aedemo.app"
             BlueprintName = "aedemo"
             ReferencedContainer = "container:Addly.xcodeproj">
          </BuildableReference>
