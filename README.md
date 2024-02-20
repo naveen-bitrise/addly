@@ -1,1 +1,3 @@
-A simple demo app for use on Bitrise
+# README for Addly
+A demo project for Bitrise
+

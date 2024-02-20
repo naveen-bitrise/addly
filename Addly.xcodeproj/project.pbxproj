@@ -20,6 +20,18 @@
 		AF825C6028BFB50A005F0578 /* IntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */; };
 		AF825C6228BFB5EA005F0578 /* AdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6128BFB5EA005F0578 /* AdderTests.swift */; };
 		AF825C6428BFB65F005F0578 /* ZeroIntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */; };
+		AF8ECC27295CCFD200E6E9E1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8ECC26295CCFD200E6E9E1 /* Media.xcassets */; };
+		AF919EBC2B85257800795FAA /* FailingAddlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF919EBB2B85257800795FAA /* FailingAddlyUITests.swift */; };
+		AF92EC832952737300E47CFA /* AddlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0A526AF4495001FF0AE /* AddlyApp.swift */; };
+		AF92EC842952737700E47CFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0A726AF4495001FF0AE /* ContentView.swift */; };
+		AF92EC852952737A00E47CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF40A0A926AF4497001FF0AE /* Assets.xcassets */; };
+		AF92EC862952738500E47CFA /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = AF825C5828BEE976005F0578 /* loading.json */; };
+		AF92EC872952739E00E47CFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF40A0AC26AF4497001FF0AE /* Preview Assets.xcassets */; };
+		AF92EC88295273B300E47CFA /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40A0D026AF4EBC001FF0AE /* NumbersOnly.swift */; };
+		AF92EC89295273B700E47CFA /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5328BEE50C005F0578 /* LottieView.swift */; };
+		AF92EC8A295273B900E47CFA /* Adder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5B28BEEDBF005F0578 /* Adder.swift */; };
+		AF92EC8B295273BD00E47CFA /* IntervalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */; };
+		AF92EC8E295273D000E47CFA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AF92EC8D295273D000E47CFA /* Lottie */; };
 		AF9826192B802156008A6B81 /* FlakyAdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9826182B802156008A6B81 /* FlakyAdderTests.swift */; };
 		AFEDB5DA2B7589F800E8521F /* FailingAdderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEDB5D92B7589F800E8521F /* FailingAdderTests.swift */; };
 /* End PBXBuildFile section */
@@ -60,10 +72,14 @@
 		AF825C5F28BFB50A005F0578 /* IntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalMaker.swift; sourceTree = "<group>"; };
 		AF825C6128BFB5EA005F0578 /* AdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderTests.swift; sourceTree = "<group>"; };
 		AF825C6328BFB65F005F0578 /* ZeroIntervalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroIntervalMaker.swift; sourceTree = "<group>"; };
+		AF825C6628C16026005F0578 /* UITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITest.xctestplan; sourceTree = "<group>"; };
+		AF8ECC26295CCFD200E6E9E1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		AF8ECC28295CE0B900E6E9E1 /* aedemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "aedemo-Info.plist"; sourceTree = "<group>"; };
+		AF919EBB2B85257800795FAA /* FailingAddlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingAddlyUITests.swift; sourceTree = "<group>"; };
+		AF92EC752952735900E47CFA /* aedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9826172B802135008A6B81 /* FlakyTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FlakyTest.xctestplan; sourceTree = "<group>"; };
 		AF9826182B802156008A6B81 /* FlakyAdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlakyAdderTests.swift; sourceTree = "<group>"; };
 		AFEDB5D92B7589F800E8521F /* FailingAdderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingAdderTests.swift; sourceTree = "<group>"; };
-		AFFB30D02AE802D700893EDC /* UITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITest.xctestplan; sourceTree = "<group>"; };
 		AFFB30D12AE82A5D00893EDC /* UnitTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTest.xctestplan; sourceTree = "<group>"; };
 		AFFB30D22AE82AC200893EDC /* FailingUnit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FailingUnit.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,20 +107,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF92EC722952735900E47CFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF92EC8E295273D000E47CFA /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AF40A09926AF4495001FF0AE = {
 			isa = PBXGroup;
 			children = (
+				AF8ECC28295CE0B900E6E9E1 /* aedemo-Info.plist */,
+				AF8ECC26295CCFD200E6E9E1 /* Media.xcassets */,
+				AF825C6628C16026005F0578 /* UITest.xctestplan */,
 				AF9826172B802135008A6B81 /* FlakyTest.xctestplan */,
 				AFFB30D22AE82AC200893EDC /* FailingUnit.xctestplan */,
-				AFFB30D02AE802D700893EDC /* UITest.xctestplan */,
 				AFFB30D12AE82A5D00893EDC /* UnitTest.xctestplan */,
 				AF40A0A426AF4495001FF0AE /* Addly */,
 				AF40A0B626AF4497001FF0AE /* AddlyTests */,
 				AF40A0C126AF4497001FF0AE /* AddlyUITests */,
 				AF40A0A326AF4495001FF0AE /* Products */,
+				AF92EC8C295273D000E47CFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +141,7 @@
 				AF40A0A226AF4495001FF0AE /* Addly.app */,
 				AF40A0B326AF4497001FF0AE /* AddlyTests.xctest */,
 				AF40A0BE26AF4497001FF0AE /* AddlyUITests.xctest */,
+				AF92EC752952735900E47CFA /* aedemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				AF40A0C226AF4497001FF0AE /* AddlyUITests.swift */,
+				AF919EBB2B85257800795FAA /* FailingAddlyUITests.swift */,
 				AF40A0C426AF4497001FF0AE /* Info.plist */,
 			);
 			path = AddlyUITests;
@@ -170,6 +199,13 @@
 				AF825C5828BEE976005F0578 /* loading.json */,
 			);
 			path = animations;
+			sourceTree = "<group>";
+		};
+		AF92EC8C295273D000E47CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,13 +267,33 @@
 			productReference = AF40A0BE26AF4497001FF0AE /* AddlyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AF92EC742952735900E47CFA /* aedemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF92EC822952735900E47CFA /* Build configuration list for PBXNativeTarget "aedemo" */;
+			buildPhases = (
+				AF92EC712952735900E47CFA /* Sources */,
+				AF92EC722952735900E47CFA /* Frameworks */,
+				AF92EC732952735900E47CFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aedemo;
+			packageProductDependencies = (
+				AF92EC8D295273D000E47CFA /* Lottie */,
+			);
+			productName = aedemo;
+			productReference = AF92EC752952735900E47CFA /* aedemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		AF40A09A26AF4495001FF0AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					AF40A0A126AF4495001FF0AE = {
@@ -251,6 +307,9 @@
 					AF40A0BD26AF4497001FF0AE = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = AF40A0A126AF4495001FF0AE;
+					};
+					AF92EC742952735900E47CFA = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -273,6 +332,7 @@
 				AF40A0A126AF4495001FF0AE /* Addly */,
 				AF40A0B226AF4497001FF0AE /* AddlyTests */,
 				AF40A0BD26AF4497001FF0AE /* AddlyUITests */,
+				AF92EC742952735900E47CFA /* aedemo */,
 			);
 		};
 /* End PBXProject section */
@@ -299,6 +359,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF92EC732952735900E47CFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF92EC862952738500E47CFA /* loading.json in Resources */,
+				AF92EC872952739E00E47CFA /* Preview Assets.xcassets in Resources */,
+				AF8ECC27295CCFD200E6E9E1 /* Media.xcassets in Resources */,
+				AF92EC852952737A00E47CFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +405,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF40A0C326AF4497001FF0AE /* AddlyUITests.swift in Sources */,
+				AF919EBC2B85257800795FAA /* FailingAddlyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF92EC712952735900E47CFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF92EC842952737700E47CFA /* ContentView.swift in Sources */,
+				AF92EC88295273B300E47CFA /* NumbersOnly.swift in Sources */,
+				AF92EC8A295273B900E47CFA /* Adder.swift in Sources */,
+				AF92EC832952737300E47CFA /* AddlyApp.swift in Sources */,
+				AF92EC89295273B700E47CFA /* LottieView.swift in Sources */,
+				AF92EC8B295273BD00E47CFA /* IntervalMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +685,71 @@
 			};
 			name = Release;
 		};
+		AF92EC802952735900E47CFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_ASSET_PATHS = "\"Addly/Preview Content\"";
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "aedemo-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitrise.aedemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF92EC812952735900E47CFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_ASSET_PATHS = "\"Addly/Preview Content\"";
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "aedemo-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitrise.aedemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -639,6 +789,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AF92EC822952735900E47CFA /* Build configuration list for PBXNativeTarget "aedemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF92EC802952735900E47CFA /* Debug */,
+				AF92EC812952735900E47CFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -654,6 +813,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		AF825C5128BEB52E005F0578 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF825C5028BEB52E005F0578 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		AF92EC8D295273D000E47CFA /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AF825C5028BEB52E005F0578 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
