@@ -60,6 +60,19 @@ workflows:
     steps:
     - script@1:
         inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
+            set -o pipefail
+            # debug log
+            set -x
+
+            # write your script here
+            exit 1
+    - script@1:
+        inputs:
         - content: |
             #!/bin/env bash
             set -ex
@@ -73,14 +86,16 @@ workflows:
             cat << EOF > "$test_run_dir/UnitTest.xml"
             <?xml version="1.0" encoding="UTF-8"?>
             <testsuites>
-                <testsuite name="ExampleTestSuite" tests="0" failures="0" errors="0" skipped="0" timestamp="2023-10-05T12:00:00" time="0.123">
+                <testsuite name="ExampleTestSuite" tests="${BITRISE_BUILD_STATUS}" failures="${BITRISE_BUILD_STATUS}" errors="0" skipped="0" timestamp="2023-10-05T12:00:00" time="0.123">
                 </testsuite>
             </testsuites>
             EOF
 
             # Creating the test-info.json file with the name of the test run defined:
 
-            echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
+            echo '{"test-name":""}' >> "$test_run_dir/test-info.json"
+        is_always_run: true
+        title: Dummy Report
     - deploy-to-bitrise-io@2: {}
 meta:
   bitrise.io:
