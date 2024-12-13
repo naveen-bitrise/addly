@@ -60,22 +60,28 @@ workflows:
     steps:
     - script@1:
         inputs:
-        - content: |-
-            #!/usr/bin/env bash
-            # fail if any commands fails
-            set -e
-            # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
-            set -o pipefail
-            # debug log
-            set -x
+        - content: |
+            #!/bin/env bash
+            set -ex
 
-            # write your script here
-            exit 1
+            # Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
 
-            # or run a script from your repository, like:
-            # bash ./path/to/script.sh
-            # not just bash, e.g.:
-            # ruby ./path/to/script.rb
+            test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+            mkdir "$test_run_dir"
+
+            # Exporting the JUnit XML test report:
+            cat << EOF > "$test_run_dir/UnitTest.xml"
+            <?xml version="1.0" encoding="UTF-8"?>
+            <testsuites>
+                <testsuite name="ExampleTestSuite" tests="0" failures="0" errors="0" skipped="0" timestamp="2023-10-05T12:00:00" time="0.123">
+                </testsuite>
+            </testsuites>
+            EOF
+
+            # Creating the test-info.json file with the name of the test run defined:
+
+            echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
+    - deploy-to-bitrise-io@2: {}
 meta:
   bitrise.io:
     stack: osx-xcode-16.0.x
