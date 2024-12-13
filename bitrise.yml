@@ -40,11 +40,6 @@ workflows:
         - cache_level: none
     - save-spm-cache@1: {}
     - deploy-to-bitrise-io@2: {}
-    triggers:
-      push:
-      - branch: main
-      pull_request:
-      - source_branch: "*"
   run_tests_2:
     summary: Run your Xcode tests and get the test report.
     description: The workflow will first clone your Git repository, cache and install
@@ -60,11 +55,9 @@ workflows:
         - cache_level: none
     - save-spm-cache@1: {}
     - deploy-to-bitrise-io@2: {}
-    triggers:
-      push:
-      - branch: main
-      pull_request:
-      - source_branch: "*"
+  hello_world:
+    steps:
+    - script@1: {}
 meta:
   bitrise.io:
     stack: osx-xcode-16.0.x
@@ -86,6 +79,7 @@ pipelines:
     workflows:
       run_tests: {}
       run_tests_2: {}
+      hello_world: {}
     triggers:
       pull_request:
       - target_branch: main
