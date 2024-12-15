@@ -3,54 +3,126 @@ format_version: '13'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ios
 workflows:
-  archive_and_export_app:
-    summary: Run your Xcode tests and create an IPA file to install your app on a
-      device or share it with your team.
-    description: The workflow will first clone your Git repository, cache and install
-      your project's dependencies if any, run your Xcode tests, export an IPA file
-      from the project and save it.
+  workflow_1:
     steps:
-    - git-clone@8: {}
-    - xcode-test@5:
+    - script@1:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-        - test_repetition_mode: retry_on_failure
-        - cache_level: none
-    - xcode-archive@5:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
+            set -o pipefail
+            # debug log
+            set -x
+
+            # write your script here
+            exit 0
+        title: Simulating Success
+    - script@1:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-        - distribution_method: "$BITRISE_DISTRIBUTION_METHOD"
-        - automatic_code_signing: api-key
-        - cache_level: none
+        - content: |
+            #!/bin/env bash
+            set -ex
+            
+            # Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+            
+            test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+            mkdir "$test_run_dir"
+            
+            # Exporting the JUnit XML test report:
+            cat << EOF > "$test_run_dir/UnitTest.xml"
+            <?xml version="1.0" encoding="UTF-8"?>
+            <testsuites>
+                <testsuite name="mockTestForBuildReport" tests="1" failures="${BITRISE_BUILD_STATUS}" errors="0" skipped="0" timestamp="2023-10-05T12:00:00" time="0.123">
+                    <testcase name="test">
+                        $(if [ $BITRISE_BUILD_STATUS -eq 1 ]; then 
+                            echo "<failure></failure>"
+                        fi)
+                    </testcase>
+                </testsuite>
+            </testsuites>
+            EOF
+            
+            # Creating the test-info.json file with the name of the test run defined:
+            echo '{"test-name":""}' >> "$test_run_dir/test-info.json"
+        is_always_run: true
+        title: Build Report for Workflow 1
     - deploy-to-bitrise-io@2: {}
-  run_tests:
-    summary: Run your Xcode tests and get the test report.
-    description: The workflow will first clone your Git repository, cache and install
-      your project's dependencies if any, run your Xcode tests and save the test results.
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
+            set -o pipefail
+            # debug log
+            set -x
+
+            # write your script here
+            echo "Hello World!"
+            printenv | sort
+
+            # or run a script from your repository, like:
+            # bash ./path/to/script.sh
+            # not just bash, e.g.:
+            # ruby ./path/to/script.rb
+    - github-status@3:
+        inputs:
+        - auth_token: "$GITHUB_TOKEN"
+  workflow_2:
     steps:
-    - git-clone@8: {}
-    - restore-spm-cache@1: {}
-    - xcode-test@5:
+    - script@1:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-        - test_repetition_mode: retry_on_failure
-        - cache_level: none
-    - save-spm-cache@1: {}
-    - deploy-to-bitrise-io@2: {}
-    triggers:
-      push:
-      - branch: main
-      pull_request:
-      - source_branch: "*"
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
+            set -o pipefail
+            # debug log
+            set -x
+
+            # write your script here
+            exit 1
+        title: Simulating Failure 
+    - script@1:
+        inputs:
+        - content: |
+            #!/bin/env bash
+            set -ex
+            
+            # Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+            
+            test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+            mkdir "$test_run_dir"
+            
+            # Exporting the JUnit XML test report:
+            cat << EOF > "$test_run_dir/UnitTest.xml"
+            <?xml version="1.0" encoding="UTF-8"?>
+            <testsuites>
+                <testsuite name="mockTestForBuildReport" tests="1" failures="${BITRISE_BUILD_STATUS}" errors="0" skipped="0" timestamp="2023-10-05T12:00:00" time="0.123">
+                    <testcase name="test">
+                        $(if [ $BITRISE_BUILD_STATUS -eq 1 ]; then 
+                            echo "<failure></failure>"
+                        fi)
+                    </testcase>
+                </testsuite>
+            </testsuites>
+            EOF
+            
+            # Creating the test-info.json file with the name of the test run defined:
+            echo '{"test-name":""}' >> "$test_run_dir/test-info.json"
+        is_always_run: true
+        title: Build Report for Workflow 2
+    - deploy-to-bitrise-io@2: {}    
 meta:
   bitrise.io:
     stack: osx-xcode-16.0.x
     machine_type_id: g2-m1.4core
 app:
-  status_report_name: 'Executing OPTA <target_id> for <project_title>'
+  status_report_name: 'Executing Report Tests <target_id> for <project_title>'
   envs:
   - BITRISE_PROJECT_PATH: Addly.xcodeproj
     opts:
@@ -61,3 +133,11 @@ app:
   - BITRISE_DISTRIBUTION_METHOD: ad-hoc
     opts:
       is_expand: false
+pipelines:
+  main-pipeline:
+    workflows:
+      workflow_1: {}
+      #workflow_2: {}
+    triggers:
+      pull_request:
+      - target_branch: main
